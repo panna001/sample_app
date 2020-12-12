@@ -13,6 +13,10 @@ class TodolistsController < ApplicationController
     @lists = List.all
   end
   
+  def show
+    @list = Listfind(params[:id])
+  end
+  
   private
 
   def list_params
